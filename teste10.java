@@ -4,12 +4,19 @@ class teste10 {
     public static void main(String entrada[]) {
 
         String instancia = "";
+        String mensagemGrande = "";
         String auto, arroz, feijao, numero, macarrao, carne, cidade, estado, CEP = "";
         String msgGeral = "Digite 1 para adicionar complemento.\nDigite 2 para não adicionar complemento.";
         String msgcam = 
         "Digite a opção da sua câmara\nDigite 1 Para 2° Instância\nDigite 2 para VISA\nDigite 3 para Meio Ambiente\nDigite 4 Para Controle Urbano\nDigite 5 para Consumidor";
         String mensagem = "";
         char op=0, cam=0;
+
+        JOptionPane.showMessageDialog
+        (null, 
+        "%%%%%% Regras de bom uso: %%%%%%\nPor favor," +
+        " não colocar nenhum tipo de acento.\nConferir se está tudo certo.\nEm caso de erro, só precisa reiniciar o programa.\n"+ 
+        "É sobre isso :)\nLulusmentallity 2022, feito por: João Lucas.");
 
         auto = (JOptionPane.showInputDialog("Digite o número do auto: "));
         arroz = (JOptionPane.showInputDialog("Digite o nome do autuado: "));
@@ -31,7 +38,7 @@ class teste10 {
         
         switch(cam){
 
-            case '1':{instancia = "2_instancia_";}
+            case '1':{instancia = "2_INSTANCIA_";}
             break;
 
             case '2':{instancia = "VISA_";}
@@ -68,11 +75,13 @@ class teste10 {
 
             default: JOptionPane.showMessageDialog(null, "Opção invalida, tente novamente.");
         }
-
+        
         if (op >= '1' && op <= '2'){
-            JOptionPane.showMessageDialog(null,"\nAbaixo para copiar o texto..");
-            System.out.println("\n\n\n\n"+ mensagem + "\n\n\n\n");
+            mensagemGrande = mensagem.toUpperCase();
+            JOptionPane.showMessageDialog(null,"\nAbaixo para copiar o texto...");
+            System.out.println("\n\n\n\n"+ mensagemGrande + "\n\n\n\n");
         }
         System.exit(0);
     }
+    
 }
