@@ -1,10 +1,10 @@
 import javax.swing.*;
 
-class teste9 {
+class teste10 {
     public static void main(String entrada[]) {
 
         String instancia = "";
-        String auto, autuado, endereco, numero, complemento, bairro, cidade, estado, CEP = "";
+        String auto, arroz, feijao, numero, macarrao, carne, cidade, estado, CEP = "";
         String msgGeral = "Digite 1 para adicionar complemento.\nDigite 2 para não adicionar complemento.";
         String msgcam = 
         "Digite a opção da sua câmara\nDigite 1 Para 2° Instância\nDigite 2 para VISA\nDigite 3 para Meio Ambiente\nDigite 4 Para Controle Urbano\nDigite 5 para Consumidor";
@@ -12,13 +12,19 @@ class teste9 {
         char op=0, cam=0;
 
         auto = (JOptionPane.showInputDialog("Digite o número do auto: "));
-        autuado = (JOptionPane.showInputDialog("Digite o nome do autuado: "));
-        endereco = (JOptionPane.showInputDialog("Digite o endereço: "));
+        arroz = (JOptionPane.showInputDialog("Digite o nome do autuado: "));
+        feijao = (JOptionPane.showInputDialog("Digite o endereço: "));
         numero = (JOptionPane.showInputDialog("Digite o número do endereço: "));
-        bairro = (JOptionPane.showInputDialog("Digite o bairro: "));
+        macarrao = (JOptionPane.showInputDialog("Digite o bairro: "));
         cidade = (JOptionPane.showInputDialog("Digite a cidade: "));
         estado = (JOptionPane.showInputDialog("Digite as siglas do estado: "));
         CEP = (JOptionPane.showInputDialog("Digite o CEP: "));
+
+        // Arroz = autuado, feijão = endereço, macarrao = bairro, carne = complemento.
+
+        String autuado = arroz.replace(" ", "_");
+        String endereco = feijao.replace(" ", "_");
+        String bairro = macarrao.replace(" ", "_");
 
         cam = (JOptionPane.showInputDialog(msgcam).charAt(0));
         op = (JOptionPane.showInputDialog(msgGeral).charAt(0));
@@ -45,7 +51,8 @@ class teste9 {
         switch(op){
             
             case '1':{
-                complemento = (JOptionPane.showInputDialog("Digite o complemento: \n"));
+                carne = (JOptionPane.showInputDialog("Digite o complemento:\n"));
+                String complemento = carne.replace(" ", "_");
                 mensagem =
                 mensagem + "1|001|1|0075908905|9912508211||N||S|e-Carta_30722_1_1_AI_"+ auto + "_"+ instancia + "NOTIFICACAO_DAM.pdf|"+ autuado + "|" + endereco + "|" + numero + "|"
                 + complemento + "|" + bairro + "|" + cidade + "|" + estado + "|" + CEP + "|";
