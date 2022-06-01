@@ -6,16 +6,17 @@ class teste10 {
         String instancia = "";
         String mensagemGrande = "";
         String auto, arroz, feijao, numero, macarrao, carne, cidade, estado, CEP = "";
-        String msgGeral = "Digite 1 para adicionar complemento.\nDigite 2 para não adicionar complemento.";
-        String msgcam = 
-        "Digite a opção da sua câmara\nDigite 1 Para 2° Instância\nDigite 2 para VISA\nDigite 3 para Meio Ambiente\nDigite 4 Para Controle Urbano\nDigite 5 para Consumidor";
         String mensagem = "";
+        String msgGeral =
+        "Digite 1 para adicionar complemento.\nDigite 2 para não adicionar complemento.";
+        String msgcam = 
+        "Digite a opção da sua câmara\nDigite 1 Para 2° Instância\nDigite 2 para VISA\nDigite 3 para Meio Ambiente\nDigite 4 Para Consumidor \nDigite 5 para Controle Urbano";
         char op=0, cam=0;
 
         JOptionPane.showMessageDialog
         (null, 
         "%%%%%% Regras de bom uso: %%%%%%\nPor favor," +
-        " não colocar nenhum tipo de acento.\nConferir se está tudo certo.\nEm caso de erro, só precisa reiniciar o programa.\n"+ 
+        " Conferir se está tudo certo.\nEm caso de erro, só precisa reiniciar o programa.\n"+ 
         "É sobre isso :)\nLulusmentallity 2022, feito por: João Lucas.");
 
         auto = (JOptionPane.showInputDialog("Digite o número do auto: "));
@@ -47,10 +48,10 @@ class teste10 {
             case '3':{instancia = "MEIO_AMBIENTE_";}
             break;
 
-            case '4':{instancia = "CONTROLE_URB_";}
+            case '4':{instancia = "CONSUMIDOR_";}
             break;
 
-            case '5':{instancia = "CONSUMIDOR_";}
+            case '5':{instancia = "CONTROLE_URB_";}
             break;
         }
 
@@ -61,14 +62,14 @@ class teste10 {
                 carne = (JOptionPane.showInputDialog("Digite o complemento:\n"));
                 String complemento = carne.replace(" ", "_");
                 mensagem =
-                mensagem + "1|001|1|0075908905|9912508211||N||S|e-Carta_30722_1_1_AI_"+ auto + "_"+ instancia + "NOTIFICACAO_DAM.pdf|"+ autuado + "|" + endereco + "|" + numero + "|"
+                mensagem + "1|001|1|xxxx|xxxx||N||S|e-Carta_x_1_1_AI_"+ auto + "_"+ instancia + "NOTIFICACAO_DAM.pdf|"+ autuado + "|" + endereco + "|" + numero + "|"
                 + complemento + "|" + bairro + "|" + cidade + "|" + estado + "|" + CEP + "|";
             }
             break;
 
             case '2':{
                 mensagem =
-                mensagem + "1|001|1|0075908905|9912508211||N||S|e-Carta_30722_1_1_AI_"+ auto + "_"+ instancia + "NOTIFICACAO_DAM.pdf|"+ autuado + "|" + endereco + "|" + numero + "|"
+                mensagem + "1|001|1|xxxx|||N||S|e-Carta_x_1_1_AI_"+ auto + "_"+ instancia + "NOTIFICACAO_DAM.pdf|"+ autuado + "|" + endereco + "|" + numero + "|"
                 + "|" + bairro + "|" + cidade + "|" + estado + "|" + CEP + "|";
             }
             break;
